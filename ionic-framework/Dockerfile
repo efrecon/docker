@@ -15,7 +15,8 @@ ENV NODE_VERSION=0.12.7 \
     BOWER_VERSION=1.5.2 \
     CORDOVA_VERSION=5.3.1 \
     GRUNT_VERSION=0.1.13 \
-    GULP_VERSION=3.9.0
+    GULP_VERSION=3.9.0 \
+    TEMPLATE=blank
 
 RUN curl --retry 3 -SLO "http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz" \
     && tar -xzf "node-v$NODE_VERSION-linux-x64.tar.gz" -C /usr/local --strip-components=1 \
@@ -26,7 +27,7 @@ RUN curl --retry 3 -SLO "http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSI
 
 RUN gem install sass
 
-RUN ionic start myApp sidemenu
+RUN ionic start myApp $TEMPLATE
 
 EXPOSE 8100
 EXPOSE 35729
