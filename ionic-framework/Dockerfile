@@ -10,10 +10,10 @@ RUN apt-get update &&  \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ENV NODE_VERSION=0.12.7 \
-    NPM_VERSION=2.14.1 \
+    NPM_VERSION=2.14.7 \
     IONIC_VERSION=1.6.5 \
-    BOWER_VERSION=1.5.2 \
-    CORDOVA_VERSION=5.3.1 \
+    BOWER_VERSION=1.5.3 \
+    CORDOVA_VERSION=5.3.3 \
     GRUNT_VERSION=0.1.13 \
     GULP_VERSION=3.9.0 \
     TEMPLATE=blank
