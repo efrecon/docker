@@ -1,5 +1,5 @@
-FROM     ubuntu:14.04.2
-MAINTAINER bitard [dot] michael [at] gmail [dot] com
+FROM     ubuntu:14.04
+MAINTAINER Emmanuel Frecon <efrecon@gmail.com>
 
 
 # Install basics
@@ -67,6 +67,6 @@ RUN echo ANDROID_HOME="${ANDROID_HOME}" >> /etc/environment
 
 RUN ["/opt/tools/android-accept-licenses.sh", "android update sdk --all --no-ui --filter platform-tools,tools,build-tools-22.0.1,android-22,extra-android-support,extra-android-m2repository,extra-google-m2repository"]
 
-
+VOLUME /myApp
 WORKDIR myApp
 CMD ["ionic", "serve"]
